@@ -5,10 +5,10 @@ import { createContext } from "react";
 
 export const ApiContext = createContext("https://pokeapi.co/api/v2/");
 
-function ApiProvider(props) {
+export function ApiProvider(props) {
     return(
-        <ApiContext.Provider>
-            props.children
+        <ApiContext.Provider value="https://pokeapi.co/api/v2/">
+            {props.children}
         </ApiContext.Provider>
     )
 }
